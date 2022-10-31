@@ -1,1 +1,1 @@
-function t(n){n.magic("scrollAmount",()=>{let o=Math.round(window.scrollY/(document.body.offsetHeight-window.innerHeight)*100);return{px:window.scrollY,percent:o,start:o==0,end:o==100}})}var l=t;export{l as default};
+function t(r){r.magic("scrollAmount",()=>{let o=Math.round(window.scrollY/(document.body.offsetHeight-window.innerHeight)*100);return{scrollPx:window.scrollY,scrollPercent:o,atStart:o==0,atEnd:o==100}})}var e=t;export{e as default};

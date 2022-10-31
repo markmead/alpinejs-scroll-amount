@@ -42,8 +42,8 @@ Alpine.start()
 >
   <span
     class="h-px bg-green-500"
-    :class="{ 'bg-green-600': scrollPos.end }"
-    :style="{ width: `${scrollPos.percent}%` }"
+    :class="{ 'bg-green-600': scrollPos.atEnd }"
+    :style="{ width: `${scrollPos.scrollPercent}%` }"
   >
   </span>
 
@@ -57,10 +57,10 @@ This is a basic example of showing a progress bar based on the user scroll.
 
 ```js
 return {
-  px: 0,
-  percent: 0,
-  start: true / false,
-  end: true / false,
+  scrollPx: 0,
+  scrollPercent: 0,
+  atStart: true / false,
+  atEnd: true / false,
 }
 ```
 

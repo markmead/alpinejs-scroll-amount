@@ -5,10 +5,10 @@ export default function (Alpine) {
     )
 
     return {
-      px: window.scrollY,
-      percent: scrollPercent,
-      start: scrollPercent == 0,
-      end: scrollPercent == 100,
+      scrollPx: window.scrollY,
+      scrollPercent: scrollPercent,
+      atStart: scrollPercent == 0,
+      atEnd: scrollPercent == 100,
     }
   })
 }
