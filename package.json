@@ -1,15 +1,19 @@
 {
-  "name": "PLUGIN",
+  "name": "alpinejs-scroll-amount",
   "version": "1.0.0",
-  "description": "Description of the plugin",
+  "description": "Track the users scroll position and their progress on the page 🤿",
   "keywords": [
     "Alpine",
     "Alpine JS",
     "Alpine JS Plugin",
-    "Alpine JS Plugins"
+    "Alpine JS Plugins",
+    "Alpine JS Scroll Tracking",
+    "Alpine JS Scroll Amount",
+    "JavaScript Scroll",
+    "Scroll Progress Bar"
   ],
-  "module": "dist/FILE.esm.js",
-  "unpkg": "dist/FILE.min.js",
+  "module": "dist/scroll-amount.esm.js",
+  "unpkg": "dist/scroll-amount.min.js",
   "scripts": {
     "build": "node scripts/build.js"
   },

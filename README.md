@@ -1,61 +1,16 @@
-**--- DELETE START ---**
+# Alpine JS Scroll Amount
 
-# Alpine JS Plugin Template
-
-This is a template repository to help developers quickly build Alpine JS
-plugins.
-
-## How to Use
-
-1. Clone the repository with the "Use this template" button on GitHub
-2. Run `npm install` to install ES Build
-3. Build your plugin
-
-### Compiling
-
-To compile the code you run `npm run build` which will create two files in the
-`/dist` directory.
-
-### Testing
-
-In this template you will find a `index.html` file that you can use for testing
-how the Alpine JS plugin works.
-
-I recommend using [vercel/serve](https://www.npmjs.com/package/serve) to serve
-this file.
-
-## Things to Change
-
-- Find and replace "PLUGIN" with the name of your plugin
-- Find and replace "FILE" with the name of your compiled file
-- Uncomment "index.html" in the `.gitignore` file
-
-🚨 Make sure find and replace is case sensitive
-
-If you were creating a plugin called "Alpine JS CSV" you could do the following:
-
-- "PLUGIN" to "alpinejs-csv"
-- "FILE" to "csv"
-
-### License
-
-The choice of adding a license and what license is best for your project is up
-to you.
-
-[Adding a License on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
-
-**--- DELETE END ---**
-
-# Alpine JS Plugin
-
-Description of the plugin.
+Track the users scroll position and their progress on the page 🤿
 
 ## Install
 
 ### With a CDN
 
 ```html
-<script defer src="https://unpkg.com/PLUGIN@latest/dist/FILE.min.js"></script>
+<script
+  defer
+  src="https://unpkg.com/alpinejs-scroll-amount@latest/dist/scroll-amount.min.js"
+></script>
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 ```
@@ -63,27 +18,55 @@ Description of the plugin.
 ### With a Package Manager
 
 ```shell
-yarn add -D PLUGIN
+yarn add -D alpinejs-scroll-amount
 
-npm install -D PLUGIN
+npm install -D alpinejs-scroll-amount
 ```
 
 ```js
 import Alpine from 'alpinejs'
-import FILE from 'PLUGIN'
+import scrollAmount from 'alpinejs-scroll-amount'
 
-Alpine.plugin(FILE)
+Alpine.plugin(scrollAmount)
 
 Alpine.start()
 ```
 
 ## Example
 
-Examples of how the plugin works.
+```html
+<div
+  x-data="{ scrollPos: {} }"
+  x-init="scrollPos = $scrollAmount"
+  x-on:scroll.window="scrollPos = $scrollAmount"
+>
+  <span
+    class="h-px bg-green-500"
+    :class="{ 'bg-green-600': scrollPos.end }"
+    :style="{ width: `${scrollPos.percent}%` }"
+  >
+  </span>
+
+  <article> ... </article>
+</div>
+```
+
+This is a basic example of showing a progress bar based on the user scroll.
+
+### Data Returned
+
+```js
+return {
+  px: 0,
+  percent: 0,
+  start: true / false,
+  end: true / false,
+}
+```
 
 ## Stats
 
-![](https://img.shields.io/bundlephobia/min/PLUGIN)
-![](https://img.shields.io/npm/v/PLUGIN)
-![](https://img.shields.io/npm/dt/PLUGIN)
-![](https://img.shields.io/github/license/markmead/PLUGIN)
+![](https://img.shields.io/bundlephobia/min/alpinejs-scroll-amount)
+![](https://img.shields.io/npm/v/alpinejs-scroll-amount)
+![](https://img.shields.io/npm/dt/alpinejs-scroll-amount)
+![](https://img.shields.io/github/license/markmead/alpinejs-scroll-amount)

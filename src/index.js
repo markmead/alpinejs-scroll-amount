@@ -1,8 +1,14 @@
 export default function (Alpine) {
-  Alpine.directive(
-    '[name]',
-    (el, { value, modifiers, expression }, { Alpine, effect, cleanup }) => {}
-  )
+  Alpine.magic('scrollAmount', () => {
+    const scrollPercent = Math.round(
+      (window.scrollY / (document.body.offsetHeight - window.innerHeight)) * 100
+    )
 
-  Alpine.magic('[name]', (el, { Alpine }) => {})
+    return {
+      px: window.scrollY,
+      percent: scrollPercent,
+      start: scrollPercent == 0,
+      end: scrollPercent == 100,
+    }
+  })
 }

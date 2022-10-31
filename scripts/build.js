@@ -1,13 +1,13 @@
 build({
   entryPoints: [`builds/cdn.js`],
-  outfile: `dist/FILE.min.js`,
+  outfile: `dist/scroll-amount.min.js`,
   platform: 'browser',
   define: { CDN: true },
 })
 
 build({
   entryPoints: [`builds/module.js`],
-  outfile: `dist/FILE.esm.js`,
+  outfile: `dist/scroll-amount.esm.js`,
   platform: 'neutral',
   mainFields: ['main', 'module'],
 })
