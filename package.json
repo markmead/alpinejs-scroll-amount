@@ -1,6 +1,6 @@
 {
   "name": "alpinejs-scroll-amount",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Track the users scroll position and their progress on the page 🤿",
   "keywords": [
     "Alpine",
@@ -18,6 +18,6 @@
     "build": "node scripts/build.js"
   },
   "devDependencies": {
-    "esbuild": "^0.16.2"
+    "esbuild": "^0.20.2"
   }
 }
